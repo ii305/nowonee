@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-size: 24px;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .moving-text {
+            animation: move 10s infinite alternate;
+            font-size: 40px;
+        }
+        @keyframes move {
+            from {transform: translateX(0%);}
+            to {transform: translateX(100%);}
+        }
+        .discord-link {
+            font-size: 48px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-text">I miss you</div>
+    <div class="discord-link">discord.gg/naa</div>
+</body>
+</html>
