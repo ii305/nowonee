@@ -1,38 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://github.com/ii305/nowonee/blob/main/helo.html">
-    <title>Special Page</title>
+    <meta charset="UTF-8">
+    <title>305 & Aziz</title>
     <style>
         body {
             background-color: black;
-            color: red;
-            font-size: 24px;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
             overflow: hidden;
             height: 100vh;
-            margin: 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-direction: column;
-        }
-        .moving-text {
-            animation: move 10s infinite alternate;
-            font-size: 40px;
+            justify-content: center;
+            align-items: center;
         }
         @keyframes move {
             from {transform: translateX(0%);}
             to {transform: translateX(100%);}
         }
-        .discord-link {
-            font-size: 48px;
-            color: white;
+        .moving-text {
+            animation: move 10s infinite alternate;
+            font-size: 40px;
         }
     </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://github.com/ii305/nowonee/blob/main/helo.html">click here</a>.</p>
-    <div class="moving-text">I miss you</div>
-    <div class="discord-link">discord.gg/naa</div>
+    <script>
+        var names = [
+            { name: "305", color: "red" },
+            { name: "Aziz", color: "white" }
+        ];
+
+        var nameIndex = 0;
+
+        function changeNames() {
+            var currentName = names[nameIndex];
+            document.getElementById("name").textContent = currentName.name;
+            document.getElementById("name").style.color = currentName.color;
+            nameIndex = (nameIndex + 1) % names.length;
+        }
+
+        // Change the names every 1 second
+        setInterval(changeNames, 1000);
+    </script>
+    <img src="https://media.discordapp.net/attachments/1172863232101339167/1240138391027187722/phonto.jpg" width="238" height="300">
+    <p>
+        <font face="Courier" size="6">
+            <span>Hacked By -</span>
+            <span id="name"></span>
+        </font>
+    </p>
+    <p>
+        <a href="https://discord.gg/naa" style="font-size: 24px; color: red; text-decoration: none;">Discord.gg/naa</a>
+    </p>
 </body>
 </html>
